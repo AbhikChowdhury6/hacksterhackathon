@@ -36,9 +36,15 @@ class RobotCar:
 
 
 if __name__ == "__main__":
-    car = RobotCar(host="YOUR_ESP_IP_HERE")  # e.g., "192.168.1.87"
-
+    car = RobotCar(host="172.22.111.167")  # e.g., "192.168.1.87"
+    #other
     try:
+        while True:
+            car.led_on()
+            time.sleep(1)
+            car.led_off()
+            time.sleep(1)
+
         print("Forward for 0.5s…")
         car.forward()
         time.sleep(0.5)
